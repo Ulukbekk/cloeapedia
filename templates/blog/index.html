@@ -1,0 +1,183 @@
+{% extends '../base.html' %}
+
+{% block content %}
+<!--<section class="section first-section">-->
+<!--    <div class="container-fluid">-->
+<!--        <div class="masonry-blog clearfix">-->
+<!--            {% for post in posts %}-->
+<!--            {% if post.hot_pos == 'pos1' %}-->
+<!--            <div class="left-side">-->
+<!--                <div class="masonry-box post-media">-->
+<!--                    <img src="{{ pos.image.url }}" alt="" class="img-fluid">-->
+<!--                    <div class="shadoweffect">-->
+<!--                        <div class="shadow-desc">-->
+<!--                            <div class="blog-meta">-->
+<!--                                <span class="bg-{{ post.category.color }}">-->
+<!--                                    <a href="{% url 'category_details' post.category.id %}">-->
+<!--                                        {{ post.category.title }}-->
+<!--                                    </a>-->
+<!--                                </span>-->
+<!--                                <h4>-->
+<!--                                    <a href="{% url 'post_detail' post.id %}">-->
+<!--                                        {{ post.title }}-->
+<!--                                    </a>-->
+<!--                                </h4>-->
+<!--                                <small>-->
+<!--                                    <a href="{% url 'post_detail' post.id %}">-->
+<!--                                        {{ post.date_created|date:"d M, Y" }}-->
+<!--                                    </a>-->
+<!--                                </small>-->
+<!--                                <small><a href="#">by {{ post.author.username }}</a></small>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+
+<!--            <div class="center-side">-->
+<!--                {% elif post.hot_pos == 'pos3' %}-->
+<!--                <div class="masonry-box post-media">-->
+<!--                    <img src="{{ post.image.url }}" alt="" class="img-fluid">-->
+<!--                    <div class="shadoweffect">-->
+<!--                        <div class="shadow-desc">-->
+<!--                            <div class="blog-meta">-->
+<!--                                <span class="bg-{{ post.category.color }}">-->
+<!--                                    <a href="{% url 'category_details' post.category.id %}">-->
+<!--                                        {{ post.category.title }}-->
+<!--                                    </a>-->
+<!--                                </span>-->
+<!--                                <h4>-->
+<!--                                    <a href="{% url 'post_detail' post.id %}">-->
+<!--                                        {{ post.title }}-->
+<!--                                    </a>-->
+<!--                                </h4>-->
+<!--                                <small>-->
+<!--                                    <a href="{% url 'post_detail' post.id %}">-->
+<!--                                        {{ post.date_created|date:"d M, Y" }}-->
+<!--                                    </a>-->
+<!--                                </small>-->
+<!--                                <small><a href="#">by {{ post.author.username }}</a></small>-->
+<!--                            </div>&lt;!&ndash; end meta &ndash;&gt;-->
+<!--                        </div>&lt;!&ndash; end shadow-desc &ndash;&gt;-->
+<!--                    </div>&lt;!&ndash; end shadow &ndash;&gt;-->
+<!--                </div>&lt;!&ndash; end post-media &ndash;&gt;-->
+
+<!--                {% elif post.hot_pos == 'pos4' %}-->
+<!--                <div class="masonry-box small-box post-media">-->
+<!--                    <img src="{{ post.image.url }}" alt="" class="img-fluid">-->
+<!--                    <div class="shadoweffect">-->
+<!--                        <div class="shadow-desc">-->
+<!--                            <div class="blog-meta">-->
+<!--                                <span class="bg-{{ post.category.color }}">-->
+<!--                                    <a href="{% url 'category_details' post.category.id %}">-->
+<!--                                        {{ post.category.title }}-->
+<!--                                    </a>-->
+<!--                                </span>-->
+<!--                                <h4>-->
+<!--                                    <a href="{% url 'post_detail' post.id %}">-->
+<!--                                        {{ post.title }}-->
+<!--                                    </a>-->
+<!--                                </h4>-->
+<!--                            </div>&lt;!&ndash; end meta &ndash;&gt;-->
+<!--                        </div>&lt;!&ndash; end shadow-desc &ndash;&gt;-->
+<!--                    </div>&lt;!&ndash; end shadow &ndash;&gt;-->
+<!--                </div>&lt;!&ndash; end post-media &ndash;&gt;-->
+
+<!--                {% elif post.hot_pos == 'pos5' %}-->
+<!--                <div class="masonry-box small-box post-media">-->
+<!--                    <img src="{{ post.image.url }}" alt="" class="img-fluid">-->
+<!--                    <div class="shadoweffect">-->
+<!--                        <div class="shadow-desc">-->
+<!--                            <div class="blog-meta">-->
+<!--                                <span class="bg-{{ post.category.color }}">-->
+<!--                                    <a href="{% url 'category_details' post.category.id %}">-->
+<!--                                        {{ post.category.title }}-->
+<!--                                    </a>-->
+<!--                                </span>-->
+<!--                                <h4>-->
+<!--                                    <a href="{% url 'post_detail' post.id %}">-->
+<!--                                        {{ post.title }}-->
+<!--                                    </a>-->
+<!--                                </h4>-->
+<!--                            </div>&lt;!&ndash; end meta &ndash;&gt;-->
+<!--                        </div>&lt;!&ndash; end shadow-desc &ndash;&gt;-->
+<!--                    </div>&lt;!&ndash; end shadow &ndash;&gt;-->
+<!--                </div>&lt;!&ndash; end post-media &ndash;&gt;-->
+<!--            </div>&lt;!&ndash; end left-side &ndash;&gt;-->
+<!--            {% elif post.hot_pos == 'pos2' %}-->
+<!--            <div class="right-side hidden-md-down">-->
+<!--                <div class="masonry-box post-media">-->
+<!--                    <img src="{{ post.image.url }}" alt="" class="img-fluid">-->
+<!--                    <div class="shadoweffect">-->
+<!--                        <div class="shadow-desc">-->
+<!--                            <div class="blog-meta">-->
+<!--                                <span class="bg-{{ post.category.color }}">-->
+<!--                                    <a href="{% url 'category_details' post.category.id %}">-->
+<!--                                        {{ post.category.title }}-->
+<!--                                    </a>-->
+<!--                                </span>-->
+<!--                                <h4>-->
+<!--                                    <a href="{% url 'post_detail' post.id %}">-->
+<!--                                        {{ post.title }}-->
+<!--                                    </a>-->
+<!--                                </h4>-->
+<!--                                <small>-->
+<!--                                    <a href="{% url 'post_detail' post.id %}">-->
+<!--                                        {{ post.date_created|date:"d M, Y" }}-->
+<!--                                    </a>-->
+<!--                                </small>-->
+<!--                                <small><a href="#">by {{ post.author.username }}</a></small>-->
+<!--                            </div>&lt;!&ndash; end meta &ndash;&gt;-->
+<!--                        </div>&lt;!&ndash; end shadow-desc &ndash;&gt;-->
+<!--                    </div>&lt;!&ndash; end shadow &ndash;&gt;-->
+<!--                </div>&lt;!&ndash; end post-media &ndash;&gt;-->
+<!--            </div>&lt;!&ndash; end right-side &ndash;&gt;-->
+<!--            {% endif %}-->
+<!--            {% endfor %}-->
+<!--        </div>&lt;!&ndash; end masonry &ndash;&gt;-->
+<!--    </div>-->
+<!--</section>-->
+
+<section class="section">
+    <div class="container">
+        {% for category in categories %}
+        <div class="blog-list clearfix">
+            <div class="section-title">
+                <h3 class="color-{{ category.color }}"><a href="{% url 'category_details' category.id %}">
+                    {{ category.title }}</a></h3>
+            </div><!-- end title -->
+
+            {% for post in category.posts.all|slice:"0:2" %}
+            {% if post.published %}
+
+            <div class="blog-box row">
+                <div class="col-md-4">
+                    <div class="post-media">
+                        <a href="{% url 'post_detail' post.id %}">
+                            <img src="{{ post.image.url }}" alt="" class="img-fluid">
+                            <div class="hovereffect"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-meta big-meta col-md-8">
+                    <h4><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
+                    </h4>
+                    <p>{{ post.post|truncatechars:300}}</p>
+                    <small><a href="{% url 'category_details' post.category.id %}">{{ post.category.title }}</a></small>
+                    <small><a href="{% url 'post_detail' post.id %}">{{ post.date_created }}</a></small>
+                    <small><a href="#">by {{ post.author.username }}</a></small>
+                </div>
+            </div>
+            <hr class="invis">
+            {% endif %}
+            {% endfor %}
+
+        </div>
+        <hr class="invis2">
+        {% endfor %}
+    </div><!-- end container -->
+</section>
+
+{% endblock content %}
